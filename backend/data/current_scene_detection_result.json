@@ -1,0 +1,47 @@
+{
+  "detected": false,
+  "confidence": 0.8355,
+  "mask_file": "G:\\SIH\\oceantrace-ai\\backend\\data\\output\\sar_mask_sentinel1_1790089597_VV.tif",
+  "confidence_file": "G:\\SIH\\oceantrace-ai\\backend\\data\\output\\sar_confidence_sentinel1_1790089597_VV.tif",
+  "overlay_file": "G:\\SIH\\oceantrace-ai\\backend\\data\\output\\sar_overlay_sentinel1_1790089597_VV.png",
+  "class_distribution": {
+    "background_pixels": 262144,
+    "oil_spill_pixels": 0,
+    "lookalike_pixels": 0
+  },
+  "oil_pixel_percentage": 0.0,
+  "threshold": 0.5,
+  "compatibility": {
+    "training_range": "[-32.0 dB, 0.0 dB]",
+    "scene_range": [
+      -21.8617,
+      7.7585
+    ],
+    "scene_mean": -18.9886,
+    "scene_p2": -20.0977,
+    "scene_p98": -18.016,
+    "finite_pixel_pct": 100.0,
+    "normalization_breakdown": {
+      "below_m32_db_pct": 0.0,
+      "between_m32_0_db_pct": 100.0,
+      "above_0_db_pct": 0.0
+    },
+    "normalized_stats": {
+      "min": 0.3168,
+      "max": 1.0,
+      "mean": 0.4066,
+      "p2": 0.3719,
+      "p98": 0.437
+    },
+    "normalization_method": "decibel_scaling_clip_0_1",
+    "compatibility_status": "COMPATIBLE",
+    "reason": "Raster metrics align with physical Sentinel-1 decibel SAR input contract.",
+    "note": "Current scene inference is a model-predicted oil-spill region demonstration on newly acquired Sentinel-1 data."
+  },
+  "model_info": {
+    "architecture": "U-Net",
+    "checkpoint": "G:\\SIH\\oceantrace-ai\\backend\\models\\checkpoints\\unet_oil_spill_real_vv.pth",
+    "device": "cpu"
+  },
+  "disclaimer": "Model inference on real Sentinel-1 acquisition without scene-specific ground truth; quantitative IoU/Dice validation requires labeled ground truth."
+}

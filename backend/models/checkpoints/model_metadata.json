@@ -1,0 +1,29 @@
+{
+  "model_name": "OceanTrace PyTorch U-Net (Real Physical SAR VV)",
+  "checkpoint_path": "g:/SIH/oceantrace-ai/backend/models/checkpoints/unet_oil_spill_real_vv.pth",
+  "trained_at": "2026-09-22 23:03:55",
+  "seed": 42,
+  "in_channels": 1,
+  "num_classes": 1,
+  "base_c": 16,
+  "best_epoch": 5,
+  "best_val_metrics": {
+    "iou": 0.9281,
+    "dice": 0.9627,
+    "precision": 0.9546,
+    "recall": 0.9709,
+    "f1": 0.9627,
+    "tp": 518513,
+    "tn": 33126803,
+    "fp": 24635,
+    "fn": 15553
+  },
+  "frozen_threshold": 0.5,
+  "normalization_contract": {
+    "formula": "clip((x_dB + 32.0) / 32.0, 0.0, 1.0)",
+    "min_db": -32.0,
+    "max_db": 0.0,
+    "mu_VV_dB": -16.42,
+    "sigma_VV_dB": 4.38
+  }
+}

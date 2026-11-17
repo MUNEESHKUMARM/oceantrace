@@ -1,0 +1,22 @@
+{
+  "eval_timestamp": "2026-09-22 23:04:29",
+  "test_dataset": "Official Zenodo Part III Isolated Test Set",
+  "total_test_scenes": 450,
+  "frozen_threshold": 0.5,
+  "official_test_metrics": {
+    "iou": 0.0,
+    "dice": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "tn": 29491089,
+    "fp": 111,
+    "fn": 0
+  },
+  "lookalike_robustness": {
+    "lookalike_test_scenes": 150,
+    "lookalike_fp_rate_pct": 0.0009,
+    "verdict": "Low false-positive rate on non-oil dark ocean lookalikes"
+  }
+}

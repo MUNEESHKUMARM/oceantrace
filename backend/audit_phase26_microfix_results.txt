@@ -1,0 +1,46 @@
+==================================================================
+OCEANTRACE AI — PHASE 2.6 FINAL MICRO-CORRECTION (NORMALIZED MEAN)
+==================================================================
+Target Processed Scene: sentinel1_1790102738_VV_processed.tif
+
+=== A. RAW STATISTICS ===
+Total Pixels         : 262,144
+raw_min              : -21.861671 dB
+raw_max              : 7.758548 dB
+raw_mean             : -18.988634 dB
+raw_p2               : -20.097717 dB
+raw_p98              : -18.015976 dB
+Pixels > 0.0 dB      : 8 (0.003052%)
+
+=== B. ACTUAL NORMALIZED ARRAY STATISTICS ===
+Exact Normalization Formula: normalized = clip((raw_dB - (-32.0)) / 32.0, 0.0, 1.0)
+Computation Method: Calculated DIRECTLY from actual normalized pixel array (normalized.mean()).
+normalized_min       : 0.316823
+normalized_max       : 1.000000
+normalized_mean      : 0.406601
+normalized_p2        : 0.371946
+normalized_p98       : 0.437001
+
+Nonlinear Clipping Effect Audit:
+  raw_mean                             : -18.988634 dB
+  normalized_mean (direct array mean)  : 0.406601
+  Linear formula (raw_mean + 32)/32    : 0.406605
+  Difference due to upper clip at 0 dB : 4.500151e-06
+
+=== C. CLIPPING STATISTICS ===
+% Clipped to 0.0 (-32 dB lower bound): 0 (0.000000%)
+% Clipped to 1.0 (0 dB upper bound)   : 8 (0.003052%)
+Explicit Documentation: Exactly 8 pixels (0.003052%) exceed 0 dB and are clipped to 1.0.
+
+=== D. CURRENT-SCENE INFERENCE ===
+Product ID          : S1D_IW_GRDH_1SDV_20260918T010238_20260918T010309_004625_008A01_036E_COG
+Platform            : Sentinel-1D
+Acquisition Datetime: 2026-09-18T01:02:38.321035Z
+Oil Pixels Predicted: 0
+Oil Percentage      : 0.000000%
+Threshold           : 0.5
+Mean Background Prob: 0.9363
+Scientific Output Text: "No oil-spill pixels were predicted."
+
+=== E. PHASE 2 FINAL STATUS ===
+FINAL SCIENTIFIC STATUS: VERIFIED

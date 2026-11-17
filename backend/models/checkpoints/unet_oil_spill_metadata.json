@@ -1,0 +1,117 @@
+{
+  "architecture": "U-Net",
+  "in_channels": 1,
+  "num_classes": 1,
+  "classes": {
+    "0": "Background/Non-oil",
+    "1": "Oil Spill"
+  },
+  "dataset_location": "G:\\SIH\\oceantrace-ai\\backend\\data\\dataset",
+  "total_pairs": 23,
+  "split": {
+    "train_scenes": [
+      "00016.tif",
+      "00015.tif",
+      "00002.tif",
+      "00014.tif",
+      "00005.tif",
+      "00013.tif",
+      "00017.tif",
+      "00012.tif",
+      "00022.tif",
+      "00006.tif",
+      "00009.tif",
+      "00001.tif",
+      "00019.tif",
+      "00011.tif",
+      "00010.tif"
+    ],
+    "val_scenes": [
+      "00021.tif",
+      "00004.tif",
+      "00018.tif",
+      "00007.tif"
+    ],
+    "test_scenes": [
+      "00008.tif",
+      "00000.tif",
+      "00003.tif",
+      "00020.tif"
+    ]
+  },
+  "patch_size": 256,
+  "epochs": 5,
+  "best_epoch": 4,
+  "optimal_threshold": 0.5,
+  "optimizer": "AdamW",
+  "initial_lr": 0.0005,
+  "weight_decay": 0.0001,
+  "loss_function": "Combined BCEWithLogitsLoss(pos_weight=12.0) + DiceLoss",
+  "metrics": {
+    "best_validation_dice": 0.9942,
+    "test_iou": 0.9861,
+    "test_dice": 0.993,
+    "test_precision": 0.9875,
+    "test_recall": 0.9985,
+    "test_confusion_matrix": {
+      "tp": 222379,
+      "tn": 16551691,
+      "fp": 2815,
+      "fn": 331
+    },
+    "predicted_oil_percentage": 1.3423,
+    "ground_truth_oil_percentage": 1.3275
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.9757,
+      "val_loss": 1.2206,
+      "val_oil_iou": 0.8249,
+      "val_oil_dice": 0.904,
+      "val_precision": 0.9999,
+      "val_recall": 0.8249,
+      "predicted_oil_pct": 1.6893
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.785,
+      "val_loss": 1.04,
+      "val_oil_iou": 0.98,
+      "val_oil_dice": 0.9899,
+      "val_precision": 0.9979,
+      "val_recall": 0.9821,
+      "predicted_oil_pct": 2.0153
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.7149,
+      "val_loss": 1.0071,
+      "val_oil_iou": 0.9868,
+      "val_oil_dice": 0.9934,
+      "val_precision": 0.9881,
+      "val_recall": 0.9986,
+      "predicted_oil_pct": 2.0694
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.7043,
+      "val_loss": 0.9956,
+      "val_oil_iou": 0.9885,
+      "val_oil_dice": 0.9942,
+      "val_precision": 0.9897,
+      "val_recall": 0.9989,
+      "predicted_oil_pct": 2.0667
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.6913,
+      "val_loss": 0.9901,
+      "val_oil_iou": 0.985,
+      "val_oil_dice": 0.9924,
+      "val_precision": 0.9859,
+      "val_recall": 0.9991,
+      "predicted_oil_pct": 2.0752
+    }
+  ]
+}
